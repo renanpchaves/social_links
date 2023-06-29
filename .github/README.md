@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="projeto Socialinks" src="./preview.png" width="100%"><br>
   <p align="center">
-Programa desenvolvido na Rocketseat, criadora de conteúdo para ensino de tecnologias WEB. <br/>
+Programa desenvolvido junto da Rocketseat, foguete repleto de conteúdo para ensino de tecnologias WEB. <br/>
 </p>
 
 ## 🌞 Tecnologias
