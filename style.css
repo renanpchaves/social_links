@@ -25,19 +25,22 @@
 }
 body {
   background: var(--background) no-repeat top center/cover;
+  height: 100vh;
 }
 
-/* baixar a fonte que desejar com o peso certo no fonts.google */
+/* fonts.google!!!! */
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
-/* "margin: 56px auto 0px auto" funciona como um relógio: cima, direita, baixo, esquerda 
-border: 1px cor pra identificar onde tá a caixa melhor*/
+/* "margin: 56px auto 0px auto" funciona como um relógio 
+border: 1px solid red pode ajudar*/
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 
 /* profile */
@@ -92,9 +95,9 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 22px;
   padding: 24px;
-  width: 360px;
+  width: 100%;
 }
 ul li a {
   display: flex;
@@ -113,7 +116,7 @@ ul li a {
   text-decoration: none;
   transition: background 0.3s;
 }
-/* pseudo-selector */
+/* pseudo-selector hoverhover*/
 ul li a:hover {
   border: 1.5px solid var(--text-color);
   background: var(--surface-color-hover);
@@ -140,4 +143,14 @@ footer {
   padding: 24px;
   text-align: center;
   opacity: 0.8;
+}
+
+/* media queries! @ rules */
+@media (min-width: 700px) {
+  :root {
+    --background: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --background: url(./assets/bg-desktop-light.jpg);
+  }
 }
