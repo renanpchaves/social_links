@@ -1,0 +1,143 @@
+/* reset do CSS, selecionando todo o projeto com o asterísco */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* background raiz é o dark, a classe "light" puxa os arquivos do light mode */
+:root {
+  --text-color: white;
+  --background: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --socialinks-hover: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/MoonStars.svg);
+}
+.light {
+  --text-color: black;
+  --background: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --socialinks-hover: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+body {
+  background: var(--background) no-repeat top center/cover;
+}
+
+/* baixar a fonte que desejar com o peso certo no fonts.google */
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* "margin: 56px auto 0px auto" funciona como um relógio: cima, direita, baixo, esquerda 
+border: 1px cor pra identificar onde tá a caixa melhor*/
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+}
+
+/* profile */
+#profile img {
+  width: 112px;
+}
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/* switch yoooo */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  position: absolute;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block;
+
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+/* linksssss */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  width: 360px;
+}
+ul li a {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  padding: 16px 24px;
+
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+/* pseudo-selector */
+ul li a:hover {
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
+}
+#social-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px;
+  font-size: 24px;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+#social-links a:hover {
+  background: var(--socialinks-hover);
+}
+footer {
+  padding: 24px;
+  text-align: center;
+  opacity: 0.8;
+}
