@@ -77,6 +77,9 @@ border: 1px solid red pode ajudar*/
 
 .light #switch button {
   animation: slider 0.7s forwards;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 0;
 }
 #switch span {
   display: block;
